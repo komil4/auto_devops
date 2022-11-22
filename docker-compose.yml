@@ -22,14 +22,16 @@ services:
       - web
     networks:
       - gitlab
-  sonarqube_db:
+  postgres_db:
     image: 'postgres:latest'
     restart: 'unless-stopped'
-    container_name: 'sonarqube_db'
+    container_name: 'postgres_db'
     environment:
       POSTGRES_USER:
       POSTGRES_PASSWORD:
       POSTGRES_DB:
+    volumes:
+      - ../docker-postgresql-multiple-databases:/docker-entrypoint-initdb.d
   sonarqube:
     image: 'sonarqube:latest'
     restart: 'unless-stopped'

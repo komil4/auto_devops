@@ -120,6 +120,8 @@ class ComposeService:
 						for d in var:
 							if collection == 'ports':
 								write_line(file, get_conform_str(d, var[d], '', '', '\''), 3, '- ')
+							elif collection == 'volumes':
+								write_line(file, get_conform_str(d, var[d], '', '', ''), 3, '- ')
 							elif var[d] == '':
 								write_line(file, d, 3, '- ')
 							else:
