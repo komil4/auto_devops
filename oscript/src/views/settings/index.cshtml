@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Настройки</title>
+       <link rel="stylesheet" href="~/default.css"/>
+   </head>
+<body>
+    <div id="settings">
+        <form method="POST" asp-action="Save">
+            <div asp-validation-summary="All"></div>
+            <div class="field">
+                <label for="Dir">Путь к хранлищу</label>
+                <input name="Dir"/>
+            </div>
+            <div class="field">
+                <label for="Url">URL git репозитория</label>
+                <input name="Url"/>
+            </div>
+            <button class="field" type="submit">Сохранить</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -53,8 +53,9 @@ class ComposeService:
 		self.depends_on = []
 		self.volumes = []
 		self.networks = []
+		self.deploy = []
 		self.variables = ['image', 'restart', 'hostname', 'container_name']
-		self.collections = ['ports', 'depends_on', 'volumes', 'networks']
+		self.collections = ['ports', 'depends_on', 'volumes', 'networks', 'deploy']
 
 	def __getitem__(self, item):
 		if item == 'image':
@@ -73,6 +74,8 @@ class ComposeService:
 			return self.volumes
 		elif item == 'networks':
 			return self.networks
+		elif item == 'deploy':
+			return self.deploy
 		else:
 			return None
 
@@ -103,6 +106,9 @@ class ComposeService:
 		else:
 			self.networks.append(network)
 
+	def add_deploy(self, name, value):
+		self.deploy.append({name: value})
+
 	def write_service_to_file(self, file):
 		write_line(file, get_conform_str(self.service_name), 1)
 
@@ -122,6 +128,19 @@ class ComposeService:
 								write_line(file, get_conform_str(d, var[d], '', '', '\''), 3, '- ')
 							elif collection == 'volumes':
 								write_line(file, get_conform_str(d, var[d], '', '', ''), 3, '- ')
+							elif collection == 'deploy':
+								var_d = var[d]
+								if isinstance(var_d, dict):
+									write_line(file, get_conform_str(d), 3)
+									for c in var_d:
+										var_c = var_d[c]
+										if isinstance(var_c, dict):
+											write_line(file, get_conform_str(c), 4)
+											for q in var_c:
+												var_q = var_c[q]
+												write_line(file, get_conform_str(q, var_q), 5, '')
+
+
 							elif var[d] == '':
 								write_line(file, d, 3, '- ')
 							else:
@@ -139,14 +158,16 @@ class ComposeService:
 		for p in self.environment:
 			if isinstance(p, dict):
 				for v in p:
-					write_line(file, get_conform_str(v), 3)
 					value = p[v]
 					if isinstance(value, dict):
+						write_line(file, get_conform_str(v), 3)
 						for l in value:
 							write_line(file, ''.join([l,
 							                          ' \'',
 							                          value[l],
 							                          '\'']), 4)
+					else:
+						write_line(file, ''.join([v, '=', value]), 3, '- ')
 			else:
 				write_line(file, get_conform_str(p), 3, '- ')
 
