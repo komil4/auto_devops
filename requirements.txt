@@ -1,0 +1,3 @@
+uuid
+python-gitlab
+requests

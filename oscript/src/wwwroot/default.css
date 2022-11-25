@@ -36,15 +36,26 @@ body {
     padding-bottom: 3pt;
 }
 #settings .field {
-    margin: 2em 0 0;
+    margin: 1em 0 0;
     font-size: 16px;
     padding-left: 10px;
 }
-#settings .button.field {
-    color: #337ab7;
-    border-radius: 0 !important;
+#settings .button {
+    margin: 1em 0 0;
+    font-size: 16px;
+    padding-left: 10px;
 }
-#sidebar .button.field:hover {
-    background-color: #4f93ce;
+#settings button.button {
+    background-color: #337ab7;
     color: white;
+    font-size: 16px;
+}
+#settings button.button:hover {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+}
+#settings input {
+    font-size: 16px;
+    width: 50%;
 }

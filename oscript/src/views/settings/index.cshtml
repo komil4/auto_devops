@@ -5,18 +5,46 @@
        <link rel="stylesheet" href="~/default.css"/>
    </head>
 <body>
-    <div id="settings">
-        <form method="POST" asp-action="Save">
+    <div id="settings" class="settings">
+        <form method="POST" asp-action="Save" class="ui form">
             <div asp-validation-summary="All"></div>
             <div class="field">
+                <h3>Настройки GitSync</h3>
+            </div>
+            <div class="field">
                 <label for="Dir">Путь к хранлищу</label>
-                <input name="Dir"/>
+                <input name="Dir" value="@Model?.Dir"/>
             </div>
             <div class="field">
                 <label for="Url">URL git репозитория</label>
-                <input name="Url"/>
+                <input name="Url" value="@Model?.Url"/>
             </div>
-            <button class="field" type="submit">Сохранить</button>
+            <div class="field">
+                <label for="User">Пользователь хранилища</label>
+                <input name="User" value="@Model?.User"/>
+            </div>
+            <div class="field">
+                <label for="Password">Пароль хранилища</label>
+                <input name="Password" value="@Model?.Password"/>
+            </div>
+            <div class="field">
+                <h3>Настройки Gitlab</h3>
+            </div>
+            <div class="field">
+                <label for="PrivateToken">Персональный токен</label>
+                <input name="PrivateToken" value="@Model?.PrivateToken"/>
+            </div>
+            <div class="field">
+                <h3>Настройки Git репозитория</h3>
+            </div>
+            <div class="field">
+                <label for="SSHkey">SSH ключ</label>
+                <textarea name="SSHkey" cols="50" rows="10">@Model?.SSHkey</textarea></p>
+            </div>
+            <button class="ui primary button" type="submit">Сохранить</button>
+        </form>
+        <form method="GET" asp-action="Generatessh">
+            <button class="ui primary button" type="submit">Сгенерировать SSH ключ</button>
         </form>
     </div>
 </body>

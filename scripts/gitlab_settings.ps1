@@ -1,0 +1,1 @@
+docker exec gitlab-ce /bin/bash -c "sed -i 's/\x23 external_url \x27GENERATED_EXTERNAL_URL\x27/ external_url \x27http\x3A\x2F\x2Flocalhost:1080\x27/' /etc/gitlab/gitlab.rb; gitlab-ctl reconfigure"

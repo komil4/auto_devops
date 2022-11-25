@@ -1,0 +1,8 @@
+﻿{
+    "Dir": "ssh-keygen -b 2048 -t rsa -f C:\\Users\\Администратор\\PycharmProjects\\auto_devops\\oscript\\src\\id_rsa -q -N \"\"",
+    "Url": "",
+    "User": "type C:\\Users\\Администратор\\PycharmProjects\\auto_devops\\oscript\\src\\id_rsa.pub",
+    "Password": "Пароль",
+    "PrivateToken": "Токен",
+    "SSHkey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC64N9KkS8ZvxvLEBAUY0r7xpRIs0nMagYg4a9DSj5rKEHu5AzQrt+7ZLVObZTQWiK4iJVdUp97zXwGDWLLnw/JTpiFnhex14WtnkTB3CYSpc3CTrVxpQpDOMFKkXHnY6p2Cv1fcOHGTIkAp23PNbU67AZyklIPs6e4v20Y35sEHuh/lt8IdQ0eowe0XpDphwgfhhTbds8yQ8CEJF/WGMU3zJ5idFbAt7Mxji+YAsp2vIzckuYa/oIzEtUK4Z6AoKq6Z7Dhw8eYIsguvnp8BBEAIY5jRafrH/dwNTivLHOddVrDy2JvdUXlCqinpM9UABalBXUvm5Tm0XFjRY/38Bx9 kamil111@kamil-srv"
+}
