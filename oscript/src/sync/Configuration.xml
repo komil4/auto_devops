@@ -210,7 +210,6 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<Catalog>Test</Catalog>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

@@ -1,8 +1,8 @@
 ﻿{
-    "dir": "D:\\1c_bases\\Хранилище",
-    "url": "ssh://git@localhost:1022/my_group/my_project.git",
-    "user": "Администратор",
-    "password": "123",
-    "privateToken": "",
-    "SSHkey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5QYvb+sR93lXhVQY3a287vb8nwM8EMxI5W3PB/+P6y6yRB0a+SAej9B7lYreMgX6LqbdKUAMZlG+4EjOdScAoecodv3QhVqWPen5qBmWaJlKNXHZuE9xz8oX0nUch6g3zWkPGK/tBuCf/azHWGA7ZemsL6QxK8PL5KApwnTgokGTG84+3wkEoIdj3wh6PiEKqV3bwj6WVARCiNz/tN1zmOehtAiDWhf1foslGrTN+XpMqaCX0H8UvqISlL056RSlK/t7V8VlrMuFm8y77e3cqR8h625o4tWvckAwdDRC2Q5Z1P6kCgfEYUFpc3XDWV2s5A6f/NHGv9ehoNV32/4AH kamil111@kamil-srv"
+    "Dir": "D:\\1c_bases\\Хранилище",
+    "Url": "ssh://git@localhost:1022/my_group/my_project.git",
+    "User": "Администратор",
+    "Password": "123",
+    "PrivateToken": "",
+    "SSHkey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNzglyG+nOdWbUB5PP3hfBJXtUPln+wVl8J/VvntCR4wGA7F6zC0FRbvhQk7lVGICm+N8BBlLUHuaBPu14twcxQsU0mvLqDaTX6/yWMwY6nZbQzoJdhBcd9sWsMOddRcSSFal5MDWBr5hiJffMZW71fhNfVcJWjhzf++0umFaRwx9dGG4yUqJ4CR9emfhoARmvGeQdjthhLfhD2EK14ie4quCu6Bjve8ywKtajnUyDs1cJiBuPfxMHTfqVveJpgGGdSSyugiHLkJLCJd1697g76JO2Vk+RksbGN7sByznPPDcOD9CpZHwpnYPL6PNdule+BM7MlfI89DmEdlIlTvYZ kamil111@kamil-srv"
 }

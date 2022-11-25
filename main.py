@@ -44,7 +44,7 @@ def get_value_gitlab_rb(prop):
 gitlab_hostname = 'http://localhost:1080'
 # min 8 characters
 gitlab_root_password = 'password'
-gitlab_shell_ssh_port = 1022
+gitlab_shell_ssh_port = 1222
 
 gitlab_root = gitlab_ce.Gitlab(gitlab_hostname)
 
@@ -58,7 +58,7 @@ gitlab_ce.set_hostname('localhost')
 gitlab_ce.set_container_name('gitlab-ce')
 gitlab_ce.add_port('1080', '1080')
 gitlab_ce.add_port('1443', '1443')
-gitlab_ce.add_port('1022', '1022')
+gitlab_ce.add_port('1222', '22')
 gitlab_ce.add_volume('./config', '/etc/gitlab')
 gitlab_ce.add_network(network)
 
