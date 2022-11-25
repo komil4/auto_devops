@@ -28,9 +28,13 @@ def get_value_gitlab_rb(prop):
             value = prop[prop_name]
             if isinstance(value, dict):
                 for value_name in value:
-                    new_value = f'{new_value}{prop_name}[\\x27{value_name}\\x27] = \\x27{value[value_name]}\\x27'
+                    value_str = f"\\x27{value[value_name]}\\x27" if isinstance(value[value_name], str) \
+                        else f"{value[value_name]}"
+                    new_value = f"{new_value}{prop_name}[\\x27{value_name}\\x27] = {value_str}"
             else:
-                new_value = f'{new_value}{prop_name} \\x27{value}\\x27'
+                value_str = f"\\x27{value}\\x27" if isinstance(value, str) \
+                    else f"{value}"
+                new_value = f"{new_value}{prop_name} {value_str}"
     else:
         new_value = f'{new_value}'
 
@@ -40,6 +44,7 @@ def get_value_gitlab_rb(prop):
 gitlab_hostname = 'http://localhost:1080'
 # min 8 characters
 gitlab_root_password = 'password'
+gitlab_shell_ssh_port = 1022
 
 gitlab_root = gitlab_ce.Gitlab(gitlab_hostname)
 
@@ -53,6 +58,7 @@ gitlab_ce.set_hostname('localhost')
 gitlab_ce.set_container_name('gitlab-ce')
 gitlab_ce.add_port('1080', '1080')
 gitlab_ce.add_port('1443', '1443')
+gitlab_ce.add_port('1022', '1022')
 gitlab_ce.add_volume('./config', '/etc/gitlab')
 gitlab_ce.add_network(network)
 
@@ -112,6 +118,13 @@ f_struct = {'external_url': gitlab_hostname}
 f_mask = get_find_mask_gitlab_rb(f_struct)
 f_value = get_value_gitlab_rb(f_struct)
 command = f"docker exec gitlab-ce /bin/bash -c \"sed -i \'s!{f_mask}!{f_value}!\' /etc/gitlab/gitlab.rb\""
+os.system(command)
+
+f_struct = {'gitlab_rails': {'gitlab_shell_ssh_port': gitlab_shell_ssh_port}}
+f_mask = get_find_mask_gitlab_rb(f_struct)
+f_value = get_value_gitlab_rb(f_struct)
+command = f"docker exec gitlab-ce /bin/bash -c \"sed -i \'s!{f_mask}!{f_value}!\' /etc/gitlab/gitlab.rb\""
+os.system(command)
 '''
 # print(command)
 os.system(command)
@@ -124,29 +137,32 @@ command = f"docker exec gitlab-ce /bin/bash -c \"sed -i \'s!{f_mask}!{f_value}!\
 # gitlab_rails['initial_root_password']
 # print(command)
 os.system(command)
-
-os.system("docker exec gitlab-ce /bin/bash -c \"gitlab-ctl reconfigure;gitlab-ctl restart\"")
 '''
+os.system("docker exec gitlab-ce /bin/bash -c \"gitlab-ctl reconfigure;gitlab-ctl restart\"")
+
+
+# GitLab
+gitlab_root.generate_root_access_token()
+gitlab_root.set_root_password(gitlab_root_password)
+gitlab_root.authenticate_gitlab()
+
+
+gitlab_root.create_group("My group", "my_group")
+users = [{'email': 'mail1@mail.ru', 'password': 'password', 'username': 'first', 'name': 'First User'},
+         {'email': 'mail2@mail.ru', 'password': 'password', 'username': 'second', 'name': 'Second User'}]
+gitlab_root.create_users(users)
+gitlab_root.add_users_to_group_members(gitlab_root.group_id)
+gitlab_root.create_project("My project", "my_project", gitlab_root.group_id)
+
 
 # Oscript
 url = 'http://localhost:5000/settings/SaveSettingsAndGetSsh'
-data = {'Dir': "C:\\temp", 'Url': gitlab_hostname, 'User': 'Администратор', 'Password': '',
+data = {'Dir': "D:\\temp", 'Url': gitlab_hostname, 'User': 'Администратор', 'Password': '',
         'PrivateToken': gitlab_root.root_access_token, 'SSHkey': ''}
 response = requests.post(url, json=data)
 response_struct = response.json()
 ssh_key = response_struct.get('SSHkey')
 
-
-# Gitlab
-gitlab_root.generate_root_access_token()
-#gitlab_root.set_root_password(gitlab_root_password)
-gitlab_root.authenticate_gitlab()
 gitlab_root.set_root_user_ssh_key(ssh_key)
-#gitlab_root.create_group("My group", "my_group")
-users = [{'email': 'mail1@mail.ru', 'password': 'password', 'username': 'first', 'name': 'First User'},
-         {'email': 'mail2@mail.ru', 'password': 'password', 'username': 'second', 'name': 'Second User'}]
-gitlab_root.create_users(users)
-gitlab_root.add_users_to_group_members('4')
-gitlab_root.create_project("My project", "my_project", '4')
 
 

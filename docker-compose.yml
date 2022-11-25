@@ -8,6 +8,7 @@ services:
     ports:
       - '1080:1080'
       - '1443:1443'
+      - '1022:1022'
     volumes:
       - ./config:/etc/gitlab
     networks:

@@ -35,15 +35,28 @@ body {
     border-bottom: 1pt solid #eee;
     padding-bottom: 3pt;
 }
+#settings .settingname {
+    margin: 2em 0 0;
+    padding-left: 10px;
+}
 #settings .field {
+    margin: 1em 0 0;
+    font-size: 16px;
+    padding-left: 20px;
+}
+#settings .button { 
     margin: 1em 0 0;
     font-size: 16px;
     padding-left: 10px;
 }
-#settings .button {
-    margin: 1em 0 0;
-    font-size: 16px;
-    padding-left: 10px;
+#settings .formbutton { 
+    display: inline-block;
+}
+#settings .formright {
+    float: right;
+}
+#settings .actions {
+    overflow: hidden;
 }
 #settings button.button {
     background-color: #337ab7;

@@ -1,9 +1,36 @@
-<!DOCTYPE html>
-<html>
-   <head>
-       <title>Index</title>
-   </head>
-<body>
-    <div>Home page (from the view)</div>
-</body>
-</html>
+@{
+    ViewBag.Title = "Home";
+}
+
+<div id="settings" class="settings">
+    <form id="SettingsForm" method="POST" asp-action="Save" class="ui form"></form>
+    <div class="ui form">
+        <div asp-validation-summary="All"></div>
+        <div class="settingname">
+            <h3>Данные хранилища</h3>
+        </div>
+        <div class="field">
+            <label for="Version">Версия хранилища:</label>
+            <input form="SettingsForm" name="Version" value="@Model?.Version" />
+        </div>
+        <div class="field">
+            <label for="Authors">Файл пользователей</label>
+            <textarea form="SettingsForm" name="Authors" cols="50" rows="10">@Model?.Authors</textarea></p>
+        </div>
+    </div>
+    <div class = "actions">
+        <div class = "button formbutton">
+            <form method="GET" asp-action="GitInit">
+                <button class="ui primary button" type="submit">Инициализировать репозиторий Gitlab</button>
+            </form>
+        </div>
+        <div class = "button formbutton">
+            <form method="GET" asp-action="GitSync">
+                <button class="ui primary button" type="submit">Синхронизировать с Gitlab</button>
+            </form>
+        </div>
+        <div class = "button formbutton formright">
+            <button form="SettingsForm" class="ui primary button" type="submit">Сохранить</button>
+        </div>
+    </div>
+</div>

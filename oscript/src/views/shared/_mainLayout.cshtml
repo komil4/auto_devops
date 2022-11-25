@@ -19,9 +19,9 @@
         <div class="row">
             <div class="three wide column" id="sidebar">
                 <div class="ui secondary vertical fluid menu">
-                    <a class="item active" asp-controller="home" asp-action="index">Главная</a>
-                    <a class="item" asp-controller="settings" asp-action="index">Настройки конвертера</a>
-                    <a class="item" asp-controller="agents" asp-action="index">Список пользоватлей</a>
+                    <a class="item @(@ViewBag.Title == "Home"?"active":"")" asp-controller="home" asp-action="index">Главная</a>
+                    <a class="item @(@ViewBag.Title == "Settings"?"active":"")" asp-controller="settings" asp-action="index">Настройки конвертера</a>
+                    <a class="item @(@ViewBag.Title == "Users"?"active":"")" asp-controller="agents" asp-action="index">Список пользоватлей</a>
                 </div>
             </div>
             <div class="twelve wide column" id="content">
