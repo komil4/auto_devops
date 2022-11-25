@@ -40,11 +40,12 @@ def get_value_gitlab_rb(prop):
 
     return new_value
 
-
-gitlab_hostname = 'http://localhost:1080'
+gitlab_host = 'http://localhost'
+gitlab_port = '1080'
+gitlab_hostname = f"{gitlab_host}:{gitlab_port}" if gitlab_port != '' else gitlab_host
 # min 8 characters
 gitlab_root_password = 'password'
-gitlab_shell_ssh_port = 1222
+gitlab_shell_ssh_port = 1022
 
 gitlab_root = gitlab_ce.Gitlab(gitlab_hostname)
 
@@ -58,7 +59,7 @@ gitlab_ce.set_hostname('localhost')
 gitlab_ce.set_container_name('gitlab-ce')
 gitlab_ce.add_port('1080', '1080')
 gitlab_ce.add_port('1443', '1443')
-gitlab_ce.add_port('1222', '22')
+gitlab_ce.add_port('1022', '22')
 gitlab_ce.add_volume('./config', '/etc/gitlab')
 gitlab_ce.add_network(network)
 
@@ -146,19 +147,26 @@ gitlab_root.generate_root_access_token()
 gitlab_root.set_root_password(gitlab_root_password)
 gitlab_root.authenticate_gitlab()
 
-
-gitlab_root.create_group("My group", "my_group")
+group_path = "my_group"
+gitlab_root.create_group("My group", group_path)
 users = [{'email': 'mail1@mail.ru', 'password': 'password', 'username': 'first', 'name': 'First User'},
          {'email': 'mail2@mail.ru', 'password': 'password', 'username': 'second', 'name': 'Second User'}]
 gitlab_root.create_users(users)
 gitlab_root.add_users_to_group_members(gitlab_root.group_id)
-gitlab_root.create_project("My project", "my_project", gitlab_root.group_id)
+project_path = "my_project"
+gitlab_root.create_project("My project", project_path, gitlab_root.group_id)
 
 
 # Oscript
+repo_hostname = gitlab_host.replace('http://', '')
+repo_hostname = gitlab_host.replace('https://', '')
+repo_hostname = f"{repo_hostname}:{gitlab_shell_ssh_port}"
+
+repo_url = f"ssh://git@{repo_hostname}/{group_path}/{project_path}.git"
+
 url = 'http://localhost:5000/settings/SaveSettingsAndGetSsh'
-data = {'Dir': "D:\\temp", 'Url': gitlab_hostname, 'User': 'Администратор', 'Password': '',
-        'PrivateToken': gitlab_root.root_access_token, 'SSHkey': ''}
+data = {'Dir': "D:\\1c_bases\\Хранилище", 'Url': repo_url, 'User': 'Администратор', 'Password': '123',
+        'PrivateToken': gitlab_root.root_access_token, 'SSHkey': '', 'Hostname': gitlab_hostname}
 response = requests.post(url, json=data)
 response_struct = response.json()
 ssh_key = response_struct.get('SSHkey')
