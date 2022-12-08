@@ -1,5 +1,5 @@
 import os
-import gitlab_ce
+import gitlab_ce_last
 import docker_compose
 import requests
 

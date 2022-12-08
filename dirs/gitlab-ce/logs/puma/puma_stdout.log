@@ -1,0 +1,7 @@
+=== puma startup: 2022-12-08 00:17:58 +0000 ===
+{"timestamp":"2022-12-08T00:17:58.462Z","pid":1502,"message":"! Promoting existing objects to old generation..."}
+{"timestamp":"2022-12-08T00:17:59.942Z","pid":1502,"message":"! Compacting..."}
+Note: GC compacting is currently disabled. Refer to `config/initializers_before_autoloader/003_gc_compact.rb` for details.
+{"timestamp":"2022-12-08T00:17:59.944Z","pid":1502,"message":"! Friendly fork preparation complete."}
+{"timestamp":"2022-12-08T00:18:01.415Z","pid":1502,"message":"- Worker 1 (PID: 1844) booted in 1.39s, phase: 0"}
+{"timestamp":"2022-12-08T00:18:01.436Z","pid":1502,"message":"- Worker 0 (PID: 1842) booted in 1.45s, phase: 0"}

@@ -1,0 +1,20 @@
+# Logfile created on 2022-12-08 00:02:24 +0000 by logger.rb/v1.4.2
+{"severity":"DEBUG","time":"2022-12-08T00:02:24.212Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":false}
+{"severity":"DEBUG","time":"2022-12-08T00:02:24.216Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":true}
+{"severity":"DEBUG","time":"2022-12-08T00:07:10.172Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":false}
+{"severity":"DEBUG","time":"2022-12-08T00:07:10.189Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":true}
+{"severity":"DEBUG","time":"2022-12-08T00:08:11.610Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":false}
+{"severity":"DEBUG","time":"2022-12-08T00:08:24.662Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":false}
+{"severity":"DEBUG","time":"2022-12-08T00:08:24.695Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":true}
+{"severity":"DEBUG","time":"2022-12-08T00:11:06.796Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":false}
+{"severity":"DEBUG","time":"2022-12-08T00:11:06.818Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":true}
+{"severity":"DEBUG","time":"2022-12-08T00:12:20.095Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":false}
+{"severity":"DEBUG","time":"2022-12-08T00:13:30.193Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":false}
+{"severity":"DEBUG","time":"2022-12-08T00:13:30.208Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":true}
+{"severity":"DEBUG","time":"2022-12-08T00:14:30.720Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":false}
+{"severity":"DEBUG","time":"2022-12-08T00:14:30.731Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":false}
+{"severity":"DEBUG","time":"2022-12-08T00:14:30.748Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":true}
+{"severity":"DEBUG","time":"2022-12-08T00:14:36.243Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":false}
+{"severity":"DEBUG","time":"2022-12-08T00:14:36.254Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":true}
+{"severity":"DEBUG","time":"2022-12-08T00:18:01.405Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":true}
+{"severity":"DEBUG","time":"2022-12-08T00:18:01.431Z","correlation_id":null,"event":"setup","model":"ActiveRecord::Base","start_service_discovery":true}

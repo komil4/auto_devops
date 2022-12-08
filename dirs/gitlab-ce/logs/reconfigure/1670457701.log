@@ -1,0 +1,20 @@
+# Logfile created on 2022-12-08 00:01:41 +0000 by logger.rb/v1.4.2
+[2022-12-08T00:01:42+00:00] INFO: Started Cinc Zero at chefzero://localhost:1 with repository at /opt/gitlab/embedded (One version per cookbook)
+[2022-12-08T00:01:42+00:00] WARN: Cinc Client 30 is running, will wait for it to finish and then run.
+[2022-12-08T00:11:55+00:00] INFO: *** Cinc Client 17.10.0 ***
+[2022-12-08T00:11:55+00:00] INFO: Platform: x86_64-linux
+[2022-12-08T00:11:55+00:00] INFO: Cinc-client pid: 583
+[2022-12-08T00:12:02+00:00] INFO: Setting the run_list to ["recipe[gitlab]"] from CLI options
+[2022-12-08T00:12:02+00:00] INFO: Run List is [recipe[gitlab]]
+[2022-12-08T00:12:02+00:00] INFO: Run List expands to [gitlab]
+[2022-12-08T00:12:02+00:00] INFO: Starting Cinc Client Run for localhost
+[2022-12-08T00:12:02+00:00] INFO: Running start handlers
+[2022-12-08T00:12:02+00:00] INFO: Start handlers complete.
+[2022-12-08T00:12:06+00:00] INFO: Loading cookbooks [gitlab@0.0.1, package@0.1.0, logrotate@0.1.0, postgresql@0.1.0, redis@0.1.0, monitoring@0.1.0, registry@0.1.0, mattermost@0.1.0, consul@0.1.0, gitaly@0.1.0, praefect@0.1.0, gitlab-kas@0.1.0, gitlab-pages@0.1.0, letsencrypt@0.1.0, nginx@0.1.0, runit@5.1.7, acme@4.1.5, crond@0.1.0]
+[2022-12-08T00:12:14+00:00] ERROR: Running exception handlers
+[2022-12-08T00:12:14+00:00] ERROR: Exception handlers complete
+[2022-12-08T00:12:15+00:00] FATAL: Stacktrace dumped to /opt/gitlab/embedded/cookbooks/cache/cinc-stacktrace.out
+[2022-12-08T00:12:15+00:00] FATAL: ---------------------------------------------------------------------------------------
+[2022-12-08T00:12:15+00:00] FATAL: PLEASE PROVIDE THE CONTENTS OF THE stacktrace.out FILE (above) IF YOU FILE A BUG REPORT
+[2022-12-08T00:12:15+00:00] FATAL: ---------------------------------------------------------------------------------------
+[2022-12-08T00:12:15+00:00] FATAL: RuntimeError: GitLab external URL must include a schema and FQDN, e.g. http://gitlab.example.com/

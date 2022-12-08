@@ -1,0 +1,170 @@
+# Logfile created on 2022-12-07 23:59:07 +0000 by logger.rb/v1.4.2
+[2022-12-07T23:59:08+00:00] INFO: Started Cinc Zero at chefzero://localhost:1 with repository at /opt/gitlab/embedded (One version per cookbook)
+[2022-12-07T23:59:08+00:00] INFO: *** Cinc Client 17.10.0 ***
+[2022-12-07T23:59:08+00:00] INFO: Platform: x86_64-linux
+[2022-12-07T23:59:08+00:00] INFO: Cinc-client pid: 35
+[2022-12-07T23:59:10+00:00] INFO: Setting the run_list to ["recipe[gitlab]"] from CLI options
+[2022-12-07T23:59:10+00:00] INFO: Run List is [recipe[gitlab]]
+[2022-12-07T23:59:10+00:00] INFO: Run List expands to [gitlab]
+[2022-12-07T23:59:10+00:00] INFO: Starting Cinc Client Run for localhost
+[2022-12-07T23:59:10+00:00] INFO: Running start handlers
+[2022-12-07T23:59:10+00:00] INFO: Start handlers complete.
+[2022-12-07T23:59:11+00:00] INFO: Loading cookbooks [gitlab@0.0.1, package@0.1.0, logrotate@0.1.0, postgresql@0.1.0, redis@0.1.0, monitoring@0.1.0, registry@0.1.0, mattermost@0.1.0, consul@0.1.0, gitaly@0.1.0, praefect@0.1.0, gitlab-kas@0.1.0, gitlab-pages@0.1.0, letsencrypt@0.1.0, nginx@0.1.0, runit@5.1.7, acme@4.1.5, crond@0.1.0]
+[2022-12-07T23:59:18+00:00] INFO: directory[/etc/gitlab] mode changed to 775
+[2022-12-07T23:59:18+00:00] INFO: Skipped selecting an init system because it was explicitly disabled
+[2022-12-07T23:59:19+00:00] INFO: template[/var/opt/gitlab/.gitconfig] created file /var/opt/gitlab/.gitconfig
+[2022-12-07T23:59:19+00:00] INFO: template[/var/opt/gitlab/.gitconfig] updated file contents /var/opt/gitlab/.gitconfig
+[2022-12-07T23:59:19+00:00] INFO: template[/var/opt/gitlab/.gitconfig] owner changed to 998
+[2022-12-07T23:59:19+00:00] INFO: template[/var/opt/gitlab/.gitconfig] group changed to 998
+[2022-12-07T23:59:19+00:00] INFO: template[/var/opt/gitlab/.gitconfig] mode changed to 644
+[2022-12-07T23:59:19+00:00] INFO: directory[/var/opt/gitlab/.bundle] created directory /var/opt/gitlab/.bundle
+[2022-12-07T23:59:19+00:00] INFO: directory[/var/opt/gitlab/.bundle] owner changed to 998
+[2022-12-07T23:59:19+00:00] INFO: directory[/var/opt/gitlab/.bundle] group changed to 998
+[2022-12-07T23:59:20+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/.ssh] called
+[2022-12-07T23:59:20+00:00] INFO: directory[/var/log/gitlab/gitlab-shell/] created directory /var/log/gitlab/gitlab-shell/
+[2022-12-07T23:59:20+00:00] INFO: directory[/var/log/gitlab/gitlab-shell/] owner changed to 998
+[2022-12-07T23:59:20+00:00] INFO: directory[/var/log/gitlab/gitlab-shell/] mode changed to 700
+[2022-12-07T23:59:20+00:00] INFO: directory[/var/opt/gitlab/gitlab-shell] created directory /var/opt/gitlab/gitlab-shell
+[2022-12-07T23:59:20+00:00] INFO: directory[/var/opt/gitlab/gitlab-shell] owner changed to 998
+[2022-12-07T23:59:20+00:00] INFO: directory[/var/opt/gitlab/gitlab-shell] mode changed to 700
+[2022-12-07T23:59:20+00:00] INFO: template[/var/opt/gitlab/gitlab-shell/config.yml] created file /var/opt/gitlab/gitlab-shell/config.yml
+[2022-12-07T23:59:20+00:00] INFO: template[/var/opt/gitlab/gitlab-shell/config.yml] updated file contents /var/opt/gitlab/gitlab-shell/config.yml
+[2022-12-07T23:59:20+00:00] INFO: template[/var/opt/gitlab/gitlab-shell/config.yml] owner changed to 0
+[2022-12-07T23:59:20+00:00] INFO: template[/var/opt/gitlab/gitlab-shell/config.yml] group changed to 998
+[2022-12-07T23:59:20+00:00] INFO: template[/var/opt/gitlab/gitlab-shell/config.yml] mode changed to 640
+[2022-12-07T23:59:20+00:00] INFO: file[/var/opt/gitlab/.ssh/authorized_keys] created file /var/opt/gitlab/.ssh/authorized_keys
+[2022-12-07T23:59:20+00:00] INFO: file[/var/opt/gitlab/.ssh/authorized_keys] owner changed to 998
+[2022-12-07T23:59:20+00:00] INFO: file[/var/opt/gitlab/.ssh/authorized_keys] group changed to 998
+[2022-12-07T23:59:20+00:00] INFO: file[/var/opt/gitlab/.ssh/authorized_keys] mode changed to 600
+[2022-12-07T23:59:20+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/git-data] called
+[2022-12-07T23:59:20+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/git-data/repositories] called
+[2022-12-07T23:59:21+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared] called
+[2022-12-07T23:59:21+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/pages] called
+[2022-12-07T23:59:21+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/artifacts] called
+[2022-12-07T23:59:22+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/external-diffs] called
+[2022-12-07T23:59:22+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/lfs-objects] called
+[2022-12-07T23:59:22+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/packages] called
+[2022-12-07T23:59:23+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/dependency_proxy] called
+[2022-12-07T23:59:23+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/terraform_state] called
+[2022-12-07T23:59:23+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/ci_secure_files] called
+[2022-12-07T23:59:23+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/encrypted_settings] called
+[2022-12-07T23:59:24+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/uploads] called
+[2022-12-07T23:59:24+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-ci/builds] called
+[2022-12-07T23:59:24+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/cache] called
+[2022-12-07T23:59:24+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/gitlab-rails/shared/tmp] called
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/etc] created directory /var/opt/gitlab/gitlab-rails/etc
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/etc] owner changed to 998
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/etc] mode changed to 700
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/working] created directory /var/opt/gitlab/gitlab-rails/working
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/working] owner changed to 998
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/working] mode changed to 700
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/tmp] created directory /var/opt/gitlab/gitlab-rails/tmp
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/tmp] owner changed to 998
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/tmp] mode changed to 700
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/upgrade-status] created directory /var/opt/gitlab/gitlab-rails/upgrade-status
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/upgrade-status] owner changed to 998
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/opt/gitlab/gitlab-rails/upgrade-status] mode changed to 700
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/log/gitlab/gitlab-rails] created directory /var/log/gitlab/gitlab-rails
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/log/gitlab/gitlab-rails] owner changed to 998
+[2022-12-07T23:59:25+00:00] INFO: directory[create /var/log/gitlab/gitlab-rails] mode changed to 700
+[2022-12-07T23:59:25+00:00] INFO: ruby_block[directory resource: /var/opt/gitlab/backups] called
+[2022-12-07T23:59:25+00:00] INFO: directory[/var/opt/gitlab/gitlab-rails] owner changed to 998
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/database.yml] created file /var/opt/gitlab/gitlab-rails/etc/database.yml
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/database.yml] updated file contents /var/opt/gitlab/gitlab-rails/etc/database.yml
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/database.yml] owner changed to 0
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/database.yml] group changed to 998
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/database.yml] mode changed to 640
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/secrets.yml] created file /var/opt/gitlab/gitlab-rails/etc/secrets.yml
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/secrets.yml] updated file contents /var/opt/gitlab/gitlab-rails/etc/secrets.yml
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/secrets.yml] owner changed to 0
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/secrets.yml] group changed to 0
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/secrets.yml] mode changed to 644
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/resque.yml] created file /var/opt/gitlab/gitlab-rails/etc/resque.yml
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/resque.yml] updated file contents /var/opt/gitlab/gitlab-rails/etc/resque.yml
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/resque.yml] owner changed to 0
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/resque.yml] group changed to 0
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/resque.yml] mode changed to 644
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/cable.yml] created file /var/opt/gitlab/gitlab-rails/etc/cable.yml
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/cable.yml] updated file contents /var/opt/gitlab/gitlab-rails/etc/cable.yml
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/cable.yml] owner changed to 0
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/cable.yml] group changed to 0
+[2022-12-07T23:59:25+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/cable.yml] mode changed to 644
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab.yml] created file /var/opt/gitlab/gitlab-rails/etc/gitlab.yml
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab.yml] updated file contents /var/opt/gitlab/gitlab-rails/etc/gitlab.yml
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab.yml] owner changed to 0
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab.yml] group changed to 998
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab.yml] mode changed to 640
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_workhorse_secret] created file /var/opt/gitlab/gitlab-rails/etc/gitlab_workhorse_secret
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_workhorse_secret] updated file contents /var/opt/gitlab/gitlab-rails/etc/gitlab_workhorse_secret
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_workhorse_secret] owner changed to 0
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_workhorse_secret] group changed to 0
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_workhorse_secret] mode changed to 644
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_shell_secret] created file /var/opt/gitlab/gitlab-rails/etc/gitlab_shell_secret
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_shell_secret] updated file contents /var/opt/gitlab/gitlab-rails/etc/gitlab_shell_secret
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_shell_secret] owner changed to 0
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_shell_secret] group changed to 0
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_shell_secret] mode changed to 644
+[2022-12-07T23:59:26+00:00] WARN: only_if block for templatesymlink[Create a gitlab_pages_secret and create a symlink to Rails root] returned a string, did you mean to run a command?
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_pages_secret] created file /var/opt/gitlab/gitlab-rails/etc/gitlab_pages_secret
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_pages_secret] updated file contents /var/opt/gitlab/gitlab-rails/etc/gitlab_pages_secret
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_pages_secret] owner changed to 0
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_pages_secret] group changed to 0
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_pages_secret] mode changed to 644
+[2022-12-07T23:59:26+00:00] WARN: only_if block for templatesymlink[Create a gitlab_kas_secret and create a symlink to Rails root] returned a string, did you mean to run a command?
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_kas_secret] created file /var/opt/gitlab/gitlab-rails/etc/gitlab_kas_secret
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_kas_secret] updated file contents /var/opt/gitlab/gitlab-rails/etc/gitlab_kas_secret
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_kas_secret] owner changed to 0
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_kas_secret] group changed to 0
+[2022-12-07T23:59:26+00:00] INFO: template[/var/opt/gitlab/gitlab-rails/etc/gitlab_kas_secret] mode changed to 644
+[2022-12-07T23:59:26+00:00] INFO: remote_file[/var/opt/gitlab/gitlab-rails/VERSION] created file /var/opt/gitlab/gitlab-rails/VERSION
+[2022-12-07T23:59:26+00:00] INFO: remote_file[/var/opt/gitlab/gitlab-rails/VERSION] updated file contents /var/opt/gitlab/gitlab-rails/VERSION
+[2022-12-07T23:59:26+00:00] INFO: remote_file[/var/opt/gitlab/gitlab-rails/REVISION] created file /var/opt/gitlab/gitlab-rails/REVISION
+[2022-12-07T23:59:26+00:00] INFO: remote_file[/var/opt/gitlab/gitlab-rails/REVISION] updated file contents /var/opt/gitlab/gitlab-rails/REVISION
+[2022-12-07T23:59:26+00:00] INFO: file[/var/opt/gitlab/gitlab-rails/RUBY_VERSION] created file /var/opt/gitlab/gitlab-rails/RUBY_VERSION
+[2022-12-07T23:59:27+00:00] INFO: file[/var/opt/gitlab/gitlab-rails/RUBY_VERSION] updated file contents /var/opt/gitlab/gitlab-rails/RUBY_VERSION
+[2022-12-07T23:59:27+00:00] INFO: directory[/etc/gitlab/trusted-certs] created directory /etc/gitlab/trusted-certs
+[2022-12-07T23:59:27+00:00] INFO: directory[/etc/gitlab/trusted-certs] mode changed to 755
+[2022-12-07T23:59:27+00:00] INFO: ruby_block[Move existing certs and link to /opt/gitlab/embedded/ssl/certs] called
+[2022-12-07T23:59:27+00:00] INFO: directory[/var/opt/gitlab/logrotate] created directory /var/opt/gitlab/logrotate
+[2022-12-07T23:59:27+00:00] INFO: directory[/var/opt/gitlab/logrotate] mode changed to 700
+[2022-12-07T23:59:27+00:00] INFO: directory[/var/opt/gitlab/logrotate/logrotate.d] created directory /var/opt/gitlab/logrotate/logrotate.d
+[2022-12-07T23:59:27+00:00] INFO: directory[/var/opt/gitlab/logrotate/logrotate.d] mode changed to 700
+[2022-12-07T23:59:27+00:00] INFO: directory[/var/log/gitlab/logrotate] created directory /var/log/gitlab/logrotate
+[2022-12-07T23:59:27+00:00] INFO: directory[/var/log/gitlab/logrotate] mode changed to 700
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.conf] created file /var/opt/gitlab/logrotate/logrotate.conf
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.conf] updated file contents /var/opt/gitlab/logrotate/logrotate.conf
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.conf] mode changed to 644
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/nginx] created file /var/opt/gitlab/logrotate/logrotate.d/nginx
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/nginx] updated file contents /var/opt/gitlab/logrotate/logrotate.d/nginx
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/puma] created file /var/opt/gitlab/logrotate/logrotate.d/puma
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/puma] updated file contents /var/opt/gitlab/logrotate/logrotate.d/puma
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-rails] created file /var/opt/gitlab/logrotate/logrotate.d/gitlab-rails
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-rails] updated file contents /var/opt/gitlab/logrotate/logrotate.d/gitlab-rails
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-shell] created file /var/opt/gitlab/logrotate/logrotate.d/gitlab-shell
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-shell] updated file contents /var/opt/gitlab/logrotate/logrotate.d/gitlab-shell
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-workhorse] created file /var/opt/gitlab/logrotate/logrotate.d/gitlab-workhorse
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-workhorse] updated file contents /var/opt/gitlab/logrotate/logrotate.d/gitlab-workhorse
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-pages] created file /var/opt/gitlab/logrotate/logrotate.d/gitlab-pages
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-pages] updated file contents /var/opt/gitlab/logrotate/logrotate.d/gitlab-pages
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-kas] created file /var/opt/gitlab/logrotate/logrotate.d/gitlab-kas
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-kas] updated file contents /var/opt/gitlab/logrotate/logrotate.d/gitlab-kas
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitaly] created file /var/opt/gitlab/logrotate/logrotate.d/gitaly
+[2022-12-07T23:59:27+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/gitaly] updated file contents /var/opt/gitlab/logrotate/logrotate.d/gitaly
+[2022-12-07T23:59:28+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/mailroom] created file /var/opt/gitlab/logrotate/logrotate.d/mailroom
+[2022-12-07T23:59:28+00:00] INFO: template[/var/opt/gitlab/logrotate/logrotate.d/mailroom] updated file contents /var/opt/gitlab/logrotate/logrotate.d/mailroom
+[2022-12-07T23:59:28+00:00] INFO: link[/var/log/gitlab/logrotate/config] created
+[2022-12-07T23:59:28+00:00] INFO: link[/opt/gitlab/service/logrotate] created
+[2022-12-07T23:59:29+00:00] INFO: execute[/opt/gitlab/bin/gitlab-ctl start logrotate] ran successfully
+[2022-12-07T23:59:29+00:00] INFO: directory[/var/opt/gitlab/redis] created directory /var/opt/gitlab/redis
+[2022-12-07T23:59:29+00:00] INFO: directory[/var/opt/gitlab/redis] owner changed to 997
+[2022-12-07T23:59:29+00:00] INFO: directory[/var/opt/gitlab/redis] group changed to 998
+[2022-12-07T23:59:29+00:00] INFO: directory[/var/opt/gitlab/redis] mode changed to 750
+[2022-12-07T23:59:29+00:00] INFO: directory[/var/log/gitlab/redis] created directory /var/log/gitlab/redis
+[2022-12-07T23:59:29+00:00] INFO: directory[/var/log/gitlab/redis] owner changed to 997
+[2022-12-07T23:59:29+00:00] INFO: directory[/var/log/gitlab/redis] mode changed to 700
+[2022-12-07T23:59:29+00:00] INFO: template[/var/opt/gitlab/redis/redis.conf] created file /var/opt/gitlab/redis/redis.conf
+[2022-12-07T23:59:29+00:00] INFO: template[/var/opt/gitlab/redis/redis.conf] updated file contents /var/opt/gitlab/redis/redis.conf
+[2022-12-07T23:59:29+00:00] INFO: template[/var/opt/gitlab/redis/redis.conf] owner changed to 997
+[2022-12-07T23:59:29+00:00] INFO: template[/var/opt/gitlab/redis/redis.conf] mode changed to 644
+[2022-12-07T23:59:29+00:00] INFO: link[/var/log/gitlab/redis/config] created
+[2022-12-07T23:59:30+00:00] INFO: link[/opt/gitlab/service/redis] created
