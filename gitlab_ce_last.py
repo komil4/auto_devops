@@ -1,6 +1,5 @@
 import os
 import uuid
-import gitlab_ce
 
 
 class Gitlab:

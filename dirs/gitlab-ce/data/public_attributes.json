@@ -1,1 +1,0 @@
-{"gitlab":{"gitlab-rails":{"db_database":"gitlabhq_production"}},"postgresql":{"dir":"/var/opt/gitlab/postgresql","unix_socket_directory":"/var/opt/gitlab/postgresql","port":5432}}

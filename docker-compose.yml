@@ -10,9 +10,9 @@ services:
       - '1443:1443'
       - '1022:22'
     volumes:
-      - ./dirs/gitlab-ce/config:/etc/gitlab
-      - ./dirs/gitlab-ce/data:/var/opt/gitlab
-      - ./dirs/gitlab-ce/logs:/var/log/gitlab
+      - ./dirs\gitlab-ce/config:/etc/gitlab
+      - ./dirs\gitlab-ce/data:/var/opt/gitlab
+      - ./dirs\gitlab-ce/logs:/var/log/gitlab
     networks:
       - devops
   gitlab-runner:
@@ -23,7 +23,7 @@ services:
     depends_on:
       - gitlab-ce
     volumes:
-      - ./dirs/gitlab-runner:/etc/gitlab-runner
+      - ./dirs\gitlab-runner:/etc/gitlab-runner
     networks:
       - devops
   postgres_db:
@@ -36,8 +36,19 @@ services:
       - POSTGRES_PASSWORD=Admin123
       - POSTGRES_MULTIPLE_DATABASES=sonarqube:admin,allure:admin
     volumes:
-      - /postgresql:/var/lib/postgresql
+      - ./dirs\postgresql:/var/lib/postgresql
       - ./scripts/postgres:/docker-entrypoint-initdb.d
+    networks:
+      - devops
+  pgadmin:
+    image: 'dpage/pgadmin4:latest'
+    restart: 'always'
+    container_name: 'pgadmin'
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=mail@mail.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - '2080:80'
     networks:
       - devops
   sonarqube:
@@ -52,11 +63,11 @@ services:
     ports:
       - '9000:9000'
     depends_on:
-      - postgresql
+      - postgres_db
     volumes:
-      - /sonarqube/data:/opt/sonarqube/data
-      - /sonarqube/extensions:/opt/sonarqube/extensions
-      - /sonarqube/logs:/opt/sonarqube/logs
+      - ./dirs\sonarqube/data:/opt/sonarqube/data
+      - ./dirs\sonarqube/extensions:/opt/sonarqube/extensions
+      - ./dirs\sonarqube/logs:/opt/sonarqube/logs
     networks:
       - devops
 networks:

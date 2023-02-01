@@ -1,6 +1,5 @@
 import os
-import gitlab_ce_last
-import docker_compose
+from docker import docker_compose
 import requests
 
 
